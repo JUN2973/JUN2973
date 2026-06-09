@@ -31,11 +31,13 @@ Spring Boot와 JSP 기반 웹 서비스부터
 
 <div align="center">
 
-| Backend | AI Service | Web Project | Deployment |
-|:---:|:---:|:---:|:---:|
-| Spring Boot | FastAPI | JSP / JavaScript | AWS S3 |
-| MyBatis | OpenCV | Kakao Map API | Docker |
-| MariaDB | Image Analysis | REST API | Cloud Config |
+| 관심 분야 | 학습 / 구현 내용 |
+|:---:|:---|
+| Backend | Spring Boot, Controller-Service-Repository 구조, MyBatis, JPA |
+| Database | MariaDB, MongoDB, SQL, 데이터 모델링 |
+| AI Service | 딥페이크 탐지, 이미지 분석, 히트맵 시각화 |
+| Deployment | AWS EC2/S3, K-PaaS, Docker |
+| Frontend | JSP, JavaScript, React, Vue 기초 |
 
 </div>
 
@@ -50,23 +52,27 @@ Spring Boot와 JSP 기반 웹 서비스부터
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![MyBatis](https://img.shields.io/badge/MyBatis-1F1F1F?style=for-the-badge&logo=databricks&logoColor=white)
 ![JSP](https://img.shields.io/badge/JSP-F89820?style=for-the-badge&logo=java&logoColor=white)
+![JPA](https://img.shields.io/badge/JPA-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
 
 ### Frontend
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
 
 ### Database & Infra
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![AWS S3](https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white)
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ### AI / API
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-02569B?style=for-the-badge&logo=postman&logoColor=white)
 
 </div>
 
@@ -82,35 +88,51 @@ Spring Boot와 JSP 기반 웹 서비스부터
 
 **딥페이크 이미지 검증 서비스**
 
-이미지를 업로드하면 외부 AI 분석 API와 Python 분석 서버를 통해  
-조작 가능성, 분석 결과, 히트맵 정보를 제공하는 웹 서비스입니다.
+이미지와 영상 속 딥페이크 여부를 분석하고,  
+사용자가 결과를 쉽게 이해할 수 있도록 시각화하는 프로젝트입니다.
 
-**주요 기능**
-- 이미지 업로드 및 분석 요청 처리
-- Spring Boot 서버와 FastAPI 분석 서버 연동
-- Reality Defender API / IMD 기반 분석 흐름 구성
-- AWS S3 이미지 저장 구조 설계
-- MariaDB, MongoDB를 활용한 결과 및 캐시 데이터 관리
+**핵심 포인트**
+- Reality Defender API 기반 1차 검증
+- IMD 오픈소스 기반 2차 검증
+- 딥페이크 의심 영역 히트맵 시각화
+- 분석 점수, 위험도, 결과 설명 제공
+- Spring Boot 서버와 Python FastAPI 분석 서버 연동
+- AWS S3 기반 이미지 저장 구조 설계
+- MariaDB / MongoDB를 활용한 분석 결과 관리
+
+**성과**
+- 딥페이크 이중 검증 구조 구현
+- 히트맵 기반 시각화 구현
+- 사용자가 결과를 쉽게 이해할 수 있는 화면 구성
+- 기여도 100%
 
 **사용 기술**  
-`Spring Boot` `JSP` `MyBatis` `MariaDB` `MongoDB` `Python` `FastAPI` `AWS S3`
+`Spring Boot` `JSP` `MyBatis` `MariaDB` `MongoDB` `Python` `FastAPI` `AWS S3` `Reality Defender API` `IMD`
 
 </td>
 <td width="50%" valign="top">
 
-### 🚴 Riding Goat
+### 🚴 RIDING GOAT
 
-**자전거 안전 내비게이션**
+**자전거 라이딩 기록·코스 공유·커뮤니티 서비스**
 
-자전거 이용자를 위한 안전 경로 안내 서비스입니다.  
-위험지역 표시, 경로 탐색, 음성 안내, 경로 이탈 감지 기능을 중심으로 구현했습니다.
+자전거 이용자를 위한 라이딩 기록, 코스 공유,  
+커뮤니티 기능을 중심으로 한 자전거 라이프스타일 플랫폼입니다.
 
-**주요 기능**
-- Kakao Map 기반 지도 표시
-- 위험지역 마커 및 위험도 구분
-- 추천 경로 탐색
-- 경로 주변 위험지역 필터링
-- 음성 안내 및 경로 이탈 경고 구조 설계
+**핵심 포인트**
+- 라이딩 기록 저장
+- 추천 코스 확인
+- 사용자 간 코스 공유
+- 커뮤니티 기능
+- 지도 기반 경로 서비스 구조 설계
+- 위험지역 표시 및 안전 경로 안내 구조 설계
+- 친환경 탄소포인트 보상 시스템 기획
+
+**성과**
+- 서비스 콘셉트 및 핵심 기능 정리
+- 라이딩 기록, 코스 공유, 커뮤니티 방향성 구체화
+- 자전거 이용을 통한 친환경 가치 반영
+- 기여도 100%
 
 **사용 기술**  
 `Spring Boot` `JSP` `JavaScript` `Kakao Map API` `MariaDB` `MyBatis`
@@ -118,6 +140,22 @@ Spring Boot와 JSP 기반 웹 서비스부터
 </td>
 </tr>
 </table>
+
+---
+
+## 📌 Sub Projects & Practice
+
+<div align="center">
+
+| Project / Practice | Description | Tech |
+|:---:|:---|:---|
+| 공지사항 CRUD | Spring Boot + MyBatis + JSP 기반 공지사항 등록, 조회, 수정, 삭제 실습 | Spring Boot, JSP, MyBatis, MariaDB |
+| JPA 게시판 | JPA와 Thymeleaf를 활용한 게시판 프로젝트 학습 | Java 17, Spring Boot 3.x, JPA, Gradle, Thymeleaf |
+| React Portfolio | React, Vite, Redux 리팩토링, SEO, 배포 흐름 학습 | React, Vite, JavaScript |
+| AWS 배포 | Spring Boot 프로젝트를 AWS 환경에 배포하는 흐름 학습 | AWS EC2, S3, Linux |
+| K-PaaS 기초 | MariaDB, Kubernetes, 서비스 포트, 배포 환경 구성 학습 | K-PaaS, Kubernetes, MariaDB |
+
+</div>
 
 ---
 
@@ -144,3 +182,57 @@ MyBatis / MariaDB       ████████░░░  Database access and S
 Python / FastAPI        ███████░░░░  AI analysis API server
 React / JavaScript      ██████░░░░░  Frontend interaction
 AWS / Docker            █████░░░░░░  Deployment and storage
+```
+
+---
+
+## 🧠 Learning Archive From Notion
+
+<div align="center">
+
+| Category | Notes |
+|:---:|:---|
+| Spring Boot | IoC, DI, AOP, Controller-Service-Repository 구조 |
+| Spring Boot + MyBatis | JSP 기반 공지사항 CRUD, Mapper, Service, MariaDB 연동 |
+| JPA | Java 17, Spring Boot 3.x, JPA, Gradle, Thymeleaf 게시판 프로젝트 |
+| Database | MariaDB 설치, SQL, DBMS/RDBMS 개념, MongoDB |
+| Frontend | React, Vite, JavaScript ES6, Vue 프로젝트 기초 |
+| Cloud / Deploy | AWS EC2/S3, Spring Boot 배포, K-PaaS, Docker |
+| Data Analysis | Python, R, 공공데이터, 시각화, 텍스트 마이닝 |
+
+</div>
+
+---
+
+## 🧭 Development Direction
+
+```text
+1. 사용자가 이해하기 쉬운 서비스를 만드는 것을 목표로 합니다.
+2. Spring Boot 기반으로 Controller → Service → Repository 흐름을 명확히 분리합니다.
+3. MariaDB, MongoDB를 상황에 맞게 활용하며 데이터 구조를 설계합니다.
+4. 외부 API와 오픈소스를 조합해 실제 동작하는 서비스를 빠르게 구현합니다.
+5. AI 분석 결과를 점수, 위험도, 히트맵처럼 직관적인 화면으로 보여주는 데 집중합니다.
+```
+
+---
+
+## 📫 Contact
+
+<div align="center">
+
+<a href="mailto:wnsdud2973@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-wnsdud2973%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<br/><br/>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=0984E3&center=true&vCenter=true&width=500&lines=Thanks+for+visiting!;Keep+building%2C+keep+learning." alt="Footer Typing SVG" />
+
+<br/><br/>
+
+방문해주셔서 감사합니다.  
+작은 기능이라도 끝까지 완성하는 개발자가 되겠습니다.
+
+</div>
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:0984E3,100:2D3436&height=120&section=footer)
